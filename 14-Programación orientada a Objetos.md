@@ -160,7 +160,9 @@ public class Test {
 ## Constructores
 
 - Método especial que inicializa atributos al crear un objeto.
+- Por defecto, si no defines ninguno, el compilador proporciona un constructor sin parámetros.
 - No tiene tipo de retorno.
+- Puedes tener varios constructores en una misma clase (sobrecarga de constructores).
 - Tipos:
   - **No parametrizado**: sin parámetros.
   - **Parametrizado**: recibe parámetros para inicializar atributos.
@@ -254,6 +256,24 @@ public class Test {
 2. Escribe la clase Rectángulo.
 3. Escribe la clase Cilíndro.
 4. Escribe la clase Estudiante.
+5. Escribe la clase `Asignatura`, que representa una asignatura de un estudiante.  
+Esta clase incluye los datos principales de la asignatura y métodos para calcular si el estudiante ha aprobado.
 
+- **Atributos**
+    - `idAsignatura` (String): Identificador único de la asignatura.  
+    - `nombre` (String): Nombre de la asignatura.  
+    - `notaMaxima` (int): Nota máxima posible en la asignatura.  
+    - `notaObtenida` (int): Nota que ha obtenido el estudiante en la asignatura.  
 
+- **Constructores**
+    - **Constructor parametrizado**: Inicializa `idAsignatura`, `nombre` y `notaMaxima`.  
+    - **Constructor por defecto**: Inicializa los atributos con valores predeterminados (opcional).  
 
+- **Métodos**
+    - **Getters y Setters**: Para acceder y modificar los atributos de forma segura (`getIdAsignatura()`, `setNotaObtenida()`, etc.).  
+    - **`estaAprobado()`**: Devuelve `true` si el estudiante ha obtenido al menos el 40% de la nota máxima, o `false` en caso contrario.  
+    - **`toString()`**: Devuelve una representación en texto de la asignatura, incluyendo `idAsignatura`, `nombre` y `notaObtenida`.  
+
+- **Ejemplo de uso**
+    - Crea un método `main` donde se cree un array con tres objetos `Asignatura` con datos iniciales.  
+    - Imprime la información de cada asignatura y, opcionalmente, si el estudiante está aprobado usando el método `estaAprobado()`.
