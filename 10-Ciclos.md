@@ -4,9 +4,9 @@ Los cilcos son sentencias que se repiten.
 En Java existen cuatro tipos de ciclos.  
 En todos los ciclos, los pasos se repiten hasta que la condición se cumpla o deje de cumplirse.
 
-# 1. WHILE Y DO…WHILE
+# 1. While Y Do…While
 
-## WHILE
+## While
 
 ### Características
 
@@ -29,7 +29,6 @@ while (condition) {
 class Test {
     public static void main(String args[]) {
         int i = 1, n = 100;
-
         while (i < n) {
             System.out.println(i);
             i = i * 2;
@@ -38,7 +37,7 @@ class Test {
 }
 ```
 
-## DO…WHILE
+## Do…While
 
 ### Características
 
@@ -70,7 +69,7 @@ class Test {
 }
 ```
 
-# 2. FOR
+# 2. For
 
 ### Características
 
@@ -98,7 +97,7 @@ class Test {
 }
 ```
 
-# 3. CICLOS ANIDADOS
+# 3. Ciclos anidados
 
 Un ciclo dentro de otro ciclo se llama ciclo anidado.  
 Se pueden anidar cualquier tipo de ciclos.
