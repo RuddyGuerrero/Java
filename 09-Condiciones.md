@@ -33,7 +33,7 @@ Permiten combinar condiciones.
 | Operador | Nombre | Ejemplo | Significado |
 |----------|--------|---------|-------------|
 | &&       | AND    | a > 0 && a < 10 | Ambas condiciones deben ser verdaderas |
-| ||       | OR     | a < 0 || a > 100 | Al menos una condición debe ser verdadera |
+| \\|\\|       | OR     | a < 0 || a > 100 | Al menos una condición debe ser verdadera |
 | !        | NOT    | !activo | Invierte el valor booleano |
 
 ## 3. Condicional if, else if y else
