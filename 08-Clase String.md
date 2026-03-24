@@ -104,11 +104,28 @@ Una expresión regular (regex) es un patrón para buscar o validar texto.
 ## Cómo se usan en Java
 
 ```java
-"12345".matches("\\d+");   // forma rápida
+package test;
 
-Pattern p = Pattern.compile("\\d+");
-Matcher m = p.matcher("12345");
-m.matches();               // forma completa
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Test {
+
+    public static void main(String[] args) {
+        // Forma rápida: String.matches comprueba si toda la cadena coincide
+        System.out.println("12345".matches("\\d+")); // true
+        System.out.println("1234a".matches("\\d+")); // false
+
+        // Forma completa: Pattern + Matcher (útil si se reutiliza el patrón)
+        Pattern p = Pattern.compile("\\d+");
+        Matcher m = p.matcher("12345");
+        System.out.println(m.matches());             // true
+
+        // Ejemplo find(): busca coincidencias parciales en la cadena
+        Matcher m2 = p.matcher("abc123def");
+        System.out.println(m2.find());              // true
+    }
+}
 ```
 
 ## Patrones básicos
@@ -137,10 +154,21 @@ m.matches();               // forma completa
 ## Ejemplos útiles
 
 ```java
-"1234".matches("\\d+");              // solo números  
-"Hola".matches("[A-Za-z]+");         // solo letras  
-"Hola".matches("[A-Z].*");           // empieza por mayúscula  
-"correo@gmail.com".matches("\\w+@\\w+\\.\\w+");  // email básico 
+package test;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Test {
+
+    public static void main(String[] args) {
+        
+        System.out.println("1234".matches("\\d+"));              // solo números  
+        System.out.println("Hola".matches("[A-Za-z]+"));         // solo letras  
+        System.out.println("Hola".matches("[A-Z].*"));           // empieza por mayúscula  
+        System.out.println("correo@gmail.com".matches("\\w+@\\w+\\.\\w+"));  // email simple 
+    }
+}
 ```
 
 ## Ejercicios String
