@@ -3,7 +3,7 @@
 Un **array** es una colección de elementos del mismo tipo.  
 En Java, los arrays tienen **tamaño fijo** y se almacenan en memoria como **objetos en el heap**, mientras que la referencia puede estar en stack o heap.
 
-# 1. ONE-DIMENSIONAL ARRAY
+# 1. Arreglos de una dimensión
 
 ## Características
 
@@ -28,7 +28,7 @@ array.length
 - Los `for` son los más usados para recorrer arrays.
 - Desde Java 5 existe el **for-each** para recorrer arrays de forma más simple.
 
-# 2. DECLARACIÓN Y CREACIÓN
+# 2. Declaración Y creación
 
 ## Declaración
 
@@ -47,7 +47,7 @@ A = new int[5];
 int A[] = new int[5];
 ```
 
-# 3. INICIALIZACIÓN
+# 3. Inicialización
 
 ## Asignación elemento por elemento
 
@@ -64,7 +64,7 @@ A[2] = 30;
 int A[] = {10, 20, 30};
 ```
 
-# 4. RECORRIDO CON FOR
+# 4. Recorrido con for
 
 ```java
 int A[] = {2, 4, 6, 8, 10};
@@ -82,7 +82,7 @@ for (int i = A.length - 1; i >= 0; i--) {
 }
 ```
 
-# 5. FOR-EACH LOOP
+# 5. Ciclo for-each
 
 El for-each recorre directamente los valores, no los índices.
 
@@ -104,7 +104,7 @@ for (int x : A) {
 }
 ```
 
-# 6. TWO-DIMENSIONAL ARRAY
+# 6. Arreglos de dos dimensiones
 
 Los arrays bidimensionales se usan para **matrices** o **tablas**.
 
@@ -134,7 +134,7 @@ int A[][] = new int[3][4];
       }
 ```
 
-# 7. FOR-EACH EN ARRAYS 2D
+# 7. For-each en arreglos de dos dimensiones
 
 ## Sintaxis
 
@@ -163,7 +163,7 @@ for (int fila[] : A) {
 }
 ```
 
-# 8. JAGGED ARRAYS (ARRAYS IRREGULARES)
+# 8. Jagged ARRAYS (ARRAYS IRREGULARES)
 
 Un **jagged array** es un array donde cada fila tiene un tamaño diferente.
 
@@ -188,7 +188,7 @@ for (int x[] : A) {
 }
 ```
 
-# 9. EJEMPLO COMPLETO DE ARRAY 1D
+# 9. Ejemplo completo de arreglo de 1D
 
 ```java
 class Test {
@@ -206,7 +206,7 @@ class Test {
 }
 ```
 
-# 10. EJEMPLO COMPLETO DE ARRAY 2D
+# 10. Ejemplo completo de arreglo de 2D
 
 ```java
 class Test {
