@@ -36,10 +36,11 @@ public class StringPractice {
         System.out.println(str4);
 
         String s1 = "Java";              // s1 apunta al String del pool
-        String s2 = new String("Java");  // s2 apunta a un objeto nuevo fuera del pool
+        String s2 = new String("Java");  // s2 apunta a un nuevo objeto en heap
         String s3 = "Java";              // s3 apuntan al mismo objeto que s1 en el pool
         System.out.println(s1 == s2);    // false (comparación de referencias)
         System.out.println(s1 == s3);    // true (ambos apuntan al mismo literal en el pool)
+        System.out.println(s1.equals(s2));    // true (comparación del contenido del string)
     }
 }
 ```
