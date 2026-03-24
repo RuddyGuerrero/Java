@@ -100,14 +100,50 @@ for (Integer x : lista) {
 ### Array → ArrayList
 
 ```java
-String[] A = {"a", "b", "c"};
-ArrayList<String> lista = new ArrayList<>(Arrays.asList(A));
+package test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Test {
+    public static void main(String[] args) {
+        
+       String[] A = {"a", "b", "c"};
+       ArrayList<String> lista = new ArrayList<>(Arrays.asList(A));
+        for (String e : lista)
+             System.out.print(e + " ");
+        System.out.println();
+    }
+}
 ```
 
 ### ArrayList → Array
 
 ```java
-String[] A = lista.toArray(new String[0]);
+package test;
+
+import java.util.ArrayList;
+
+public class Test {
+
+    public static void main(String[] args) {
+        
+        ArrayList<String> lista = new ArrayList<>();
+        lista.add("a");
+        lista.add("b");
+        lista.add("c");
+
+        // Declaramos primero el array
+        String[] A = new String[lista.size()];
+
+        // Convertimos el ArrayList a array
+        A = lista.toArray(A);
+        
+        for (String e : A)
+             System.out.print(e + " ");
+        System.out.println();
+    }
+}
 ```
 
 ## 9. Ejemplo completo
