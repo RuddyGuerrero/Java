@@ -1,6 +1,0 @@
-# En Construcción
-
-
-### Ejercicios 
-
-1. [Java Interface](https://www.hackerrank.com/challenges/java-interface/problem)
