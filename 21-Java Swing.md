@@ -123,16 +123,19 @@ Ventana principal que contiene todos los componentes.
 ### Ejemplo completo
 
 ``` java
+package jframemain;
+
 import javax.swing.*;
 import java.awt.event.*;
 
 class MyFrame extends JFrame {
     MyFrame() {
         setTitle("JFrame Demo");
-        setSize(300,200);
+        setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         addWindowListener(new WindowAdapter() {
+            @Override
             public void windowClosing(WindowEvent e) {
                 System.out.println("Cerrando ventana");
             }
@@ -142,7 +145,7 @@ class MyFrame extends JFrame {
     }
 }
 
-public class Main {
+public class JFrameMain {
     public static void main(String[] args) {
         new MyFrame();
     }
@@ -169,9 +172,12 @@ Botón que ejecuta acciones al hacer clic.
 ### Ejemplo completo
 
 ``` java
+package jbuttonmain;
+
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionListener;
 
 class MyFrame extends JFrame {
     MyFrame() {
@@ -179,23 +185,31 @@ class MyFrame extends JFrame {
 
         JButton b = new JButton("Click");
 
-        b.addActionListener(e -> {
+        b.addActionListener(e -> jButtonClicActionPerformed(e));
+        /*
+        b.addActionListener(this::jButtonClicActionPerformed);
+         b.addActionListener(e -> {
             System.out.println("Botón pulsado");
         });
-
+        */
+        
         add(b);
 
         setSize(300,200);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
     }
+    
+    void jButtonClicActionPerformed(java.awt.event.ActionEvent e){
+        System.out.println("Botón pulsado");
+    }
 }
 
-public class Main {
+public class JButtonMain {
     public static void main(String[] args) {
         new MyFrame();
     }
-}
+}  
 ```
 
 
@@ -221,9 +235,10 @@ Campo de texto de una sola línea.
 ### Ejemplo completo
 
 ``` java
+package jtextfieldmain;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 class MyFrame extends JFrame {
     MyFrame() {
@@ -243,9 +258,9 @@ class MyFrame extends JFrame {
     }
 }
 
-public class Main {
+public class JTextFieldMain {
     public static void main(String[] args) {
-        new MyFrame();
+         new MyFrame();
     }
 }
 ```
@@ -270,9 +285,10 @@ Selección múltiple.
 ### Ejemplo
 
 ``` java
+package jcheckboxmain;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 class MyFrame extends JFrame {
     MyFrame() {
@@ -292,10 +308,10 @@ class MyFrame extends JFrame {
     }
 }
 
-public class Main {
+public class JCheckBoxMain {
     public static void main(String[] args) {
         new MyFrame();
-    }
+    }   
 }
 ```
 
@@ -318,9 +334,10 @@ Selección única dentro de un grupo.
 ### Ejemplo
 
 ``` java
+package jradiobuttonmain;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 class MyFrame extends JFrame {
     MyFrame() {
@@ -345,10 +362,10 @@ class MyFrame extends JFrame {
     }
 }
 
-public class Main {
+public class JRadioButtonMain {
     public static void main(String[] args) {
         new MyFrame();
-    }
+    }   
 }
 ```
 
@@ -372,15 +389,17 @@ Texto multilínea.
 ### Ejemplo
 
 ``` java
+package jtextareamain;
+
 import javax.swing.*;
-import java.awt.event.*;
 
 class MyFrame extends JFrame {
     MyFrame() {
         JTextArea ta = new JTextArea(5,20);
 
-        ta.addKeyListener(new KeyAdapter() {
-            public void keyReleased(KeyEvent e) {
+        ta.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
+            public void keyReleased(java.awt.event.KeyEvent e) {
                 System.out.println(ta.getText());
             }
         });
@@ -393,7 +412,7 @@ class MyFrame extends JFrame {
     }
 }
 
-public class Main {
+public class JTextAreaMain {
     public static void main(String[] args) {
         new MyFrame();
     }
@@ -409,6 +428,8 @@ public class Main {
 ### Ejemplo
 
 ``` java
+package mouse.events;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -426,7 +447,7 @@ class MyFrame extends JFrame {
     }
 }
 
-public class Main {
+public class MouseEvents {
     public static void main(String[] args) {
         new MyFrame();
     }
