@@ -20,7 +20,7 @@ NetBeans permite crear interfaces gráficas usando el GUI Builder (Design), dond
 Importante:
 
 - No modificar la sección:
-- Variables declaration - do not modify
+  - Variables declaration - do not modify
 
 
 ## Estructura básica en NetBeans
